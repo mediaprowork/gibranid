@@ -15,14 +15,20 @@
   --shadow-dip: 0 20px 40px rgba(0,0,0,0.06);
   --shadow-btn-primary: 0 12px 30px rgba(184,35,27,0.25);
 
-  /* Page-level horizontal padding — background tetap full, content inset dari edge */
   --page-gutter: 64px;
+  --section-py: 120px;
 }
 
 @media (max-width: 1024px) {
-  :root { --page-gutter: 40px; }
+  :root {
+    --page-gutter: 40px;
+    --section-py: 96px;
+  }
 }
 
 @media (max-width: 640px) {
-  :root { --page-gutter: 20px; }
+  :root {
+    --page-gutter: 20px;
+    --section-py: 64px;
+  }
 }

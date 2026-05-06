@@ -25,6 +25,7 @@ const allSchemas = [websiteSchema, ...schemas];
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link rel="apple-touch-icon" href="/images/favicon.png" />
+  <link rel="preload" as="image" href="/images/gibran-prabowo.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -42,7 +43,11 @@ const allSchemas = [websiteSchema, ...schemas];
   <Footer />
   <script>
     import { initReveal } from '../lib/reveal';
-    document.addEventListener('DOMContentLoaded', initReveal);
+    import { initLazyBg } from '../lib/lazy-bg';
+    document.addEventListener('DOMContentLoaded', () => {
+      initLazyBg();
+      initReveal();
+    });
   </script>
 </body>
 </html>

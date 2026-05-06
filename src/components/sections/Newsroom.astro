@@ -52,7 +52,7 @@ const rest = news.slice(1);
 
   <div class="news-grid">
     <article class="news-card news-card-featured">
-      <div class="news-card-img" style={`background-image: url('${featured.image}'); background-size: cover; background-position: center;`}></div>
+      <div class="news-card-img" data-bg-image={featured.image}></div>
       <div class="news-card-body">
         <div class="news-card-tag">{featured.tag}</div>
         <h3 class="news-card-title">{featured.title}</h3>
@@ -61,7 +61,7 @@ const rest = news.slice(1);
     </article>
     {rest.map(article => (
       <article class="news-card">
-        <div class="news-card-img" style={`background-image: url('${article.image}'); background-size: cover; background-position: center;`}></div>
+        <div class="news-card-img" data-bg-image={article.image}></div>
         <div class="news-card-body">
           <div class="news-card-tag">{article.tag}</div>
           <h3 class="news-card-title">{article.title}</h3>

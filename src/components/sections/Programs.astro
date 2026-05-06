@@ -77,7 +77,8 @@ const programs = [
       <div class="program-card">
         <div
           class={`program-card-img ${program.gradient}`}
-          style={`background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25)), url('${program.image}'); background-size: cover; background-position: center;`}
+          data-bg-image={program.image}
+          data-bg-overlay="dark"
         >
           <div class="program-card-tag">{program.tag}</div>
           <div class="pc-symbol" aria-hidden="true">{program.symbol}</div>
